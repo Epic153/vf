@@ -1,8 +1,8 @@
-local Player = game.Players.LocalPlayer
+local LocalPlayer = game.Players.LocalPlayer
 local Players = game.Players
 local PlayerNames = {}
 
-for Player in Players:GetChildren() do
+for _, Player in pairs(Players:GetPlayers()) do
     if Player ~= LocalPlayer then
         table.insert(PlayerNames, Player.Name)
     end
